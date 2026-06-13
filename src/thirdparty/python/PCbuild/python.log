@@ -1,0 +1,1 @@
+C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\thirdparty\python\PCbuild\python.exe -c import sqlite3; print('SQLITE_RUNTIME_VERSION=' + sqlite3.sqlite_version) 

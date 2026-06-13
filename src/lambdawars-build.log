@@ -1,0 +1,107 @@
+Сборка начата 13.06.2026 11:17:16.
+     1>Проект "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\lambdawars.sln" в узле 1 (целевые объекты Build).
+     1>ValidateSolutionConfiguration:
+         Создание конфигурации решения "Release|Win32".
+     1>Проект "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\lambdawars.sln" (1) выполняет сборку "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj.metaproj" (2) в узле 1 (целевые объекты по умолчанию).
+     2>Проект "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj.metaproj" (2) выполняет сборку "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\boost\libs\python\build\VisualStudio\boost_python.vcxproj" (4) в узле 2 (целевые объекты по умолчанию).
+     4>InitializeBuildStatus:
+         Создание ".\release-obj\boost_python3.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+       Lib:
+         Для всех выходных данных обновления не требуется.
+         boost_python.vcxproj -> C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\boost\libs\python\build\VisualStudio\..\..\..\..\..\lib\public\boost_python3.lib
+       FinalizeBuildStatus:
+         Файл ".\release-obj\boost_python3.tlog\unsuccessfulbuild" удаляется.
+         Обращение к ".\release-obj\boost_python3.tlog\boost_python3.lastbuildstate".
+     4>Сборка проекта "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\boost\libs\python\build\VisualStudio\boost_python.vcxproj" завершена (целевые объекты по умолчанию).
+     1>Проект "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\lambdawars.sln" (1) выполняет сборку "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj.metaproj" (3) в узле 1 (целевые объекты по умолчанию).
+     3>Проект "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj.metaproj" (3) выполняет сборку "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj" (5) в узле 1 (целевые объекты по умолчанию).
+     5>InitializeBuildStatus:
+         Обращение к ".\Release_wars\client.tlog\unsuccessfulbuild".
+     2>Проект "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj.metaproj" (2) выполняет сборку "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj" (6) в узле 3 (целевые объекты по умолчанию).
+     6>InitializeBuildStatus:
+         Обращение к ".\Release_wars\server.tlog\unsuccessfulbuild".
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+         Для всех выходных данных обновления не требуется.
+     5>ClCompile:
+         Для всех выходных данных обновления не требуется.
+     6>ClCompile:
+         Для всех выходных данных обновления не требуется.
+         Для всех выходных данных обновления не требуется.
+         Для всех выходных данных обновления не требуется.
+     5>ClCompile:
+         Для всех выходных данных обновления не требуется.
+     6>Link:
+         Для всех выходных данных обновления не требуется.
+     5>ClCompile:
+         Для всех выходных данных обновления не требуется.
+     6>Link:
+         wars_server.vcxproj -> C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\.\Release_wars\server.dll
+       CustomBuildStep:
+         Description: Running Output Script
+         copy "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\.\Release_wars\server.dll" "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\Release_wars\dummy.server.dll"
+         cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\.\Release_wars\server.dll" "server.dll"
+         cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\Release_wars\/server.pdb" "server.pdb"
+         
+         :VCEnd
+     5>ClCompile:
+         Для всех выходных данных обновления не требуется.
+     6>CustomBuildStep:
+         Скопировано файлов:         1.
+     5>ClCompile:
+         Для всех выходных данных обновления не требуется.
+     6>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: выход из команды "copy "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\.\Release_wars\server.dll" "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\Release_wars\dummy.server.dll" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\.\Release_wars\server.dll" "server.dll" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\Release_wars\/server.pdb" "server.pdb" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073:  [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: :VCEnd" с кодом 1. [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+     6>Сборка проекта "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj" завершена (целевые объекты по умолчанию) с ошибкой.
+     5>Link:
+         Для всех выходных данных обновления не требуется.
+         wars_client.vcxproj -> C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\.\Release_wars\client.dll
+       CustomBuildStep:
+         Description: Running Output Script
+         copy "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\.\Release_wars\client.dll" "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\Release_wars\dummy.client.dll"
+         cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\.\Release_wars\client.dll" "client.dll"
+         cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\Release_wars\/client.pdb" "client.pdb"
+         
+         :VCEnd
+         Скопировано файлов:         1.
+     5>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: выход из команды "copy "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\.\Release_wars\client.dll" "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\Release_wars\dummy.client.dll" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\.\Release_wars\client.dll" "client.dll" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\Release_wars\/client.pdb" "client.pdb" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073:  [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: :VCEnd" с кодом 1. [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+     5>Сборка проекта "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj" завершена (целевые объекты по умолчанию) с ошибкой.
+     2>Сборка проекта "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj.metaproj" завершена (целевые объекты по умолчанию) с ошибкой.
+     3>Сборка проекта "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj.metaproj" завершена (целевые объекты по умолчанию) с ошибкой.
+     1>Сборка проекта "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\lambdawars.sln" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\lambdawars.sln" (целевой объект Build ) (1) ->
+       "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj.metaproj" (целевой объект по умолчанию) (2) ->
+       "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj" (целевой объект по умолчанию) (6) ->
+       (Целевой объект CustomBuildStep) -> 
+         C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: выход из команды "copy "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\.\Release_wars\server.dll" "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\Release_wars\dummy.server.dll" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+       C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\.\Release_wars\server.dll" "server.dll" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+       C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\Release_wars\/server.pdb" "server.pdb" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+       C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073:  [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+       C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: :VCEnd" с кодом 1. [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\server\wars_server.vcxproj]
+
+
+       "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\lambdawars.sln" (целевой объект Build ) (1) ->
+       "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj.metaproj" (целевой объект по умолчанию) (3) ->
+       "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj" (целевой объект по умолчанию) (5) ->
+         C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: выход из команды "copy "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\.\Release_wars\client.dll" "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\Release_wars\dummy.client.dll" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+       C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\.\Release_wars\client.dll" "client.dll" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+       C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: cscript //nologo ..\..\dllcopy.wsf "C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\Release_wars\/client.pdb" "client.pdb" [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+       C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073:  [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+       C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets(202,5): error MSB3073: :VCEnd" с кодом 1. [C:\Users\DoAr\Desktop\LW Rework\lambdawars-develop\src\game\client\wars_client.vcxproj]
+
+    Предупреждений: 0
+    Ошибок: 2
+
+Затраченное время: 00:00:04.25
