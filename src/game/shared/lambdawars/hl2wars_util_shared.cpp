@@ -144,15 +144,7 @@ QAngle UTIL_CalculateDirection( const Vector &point1, const Vector &point2 )
 {
 	float diff_x = point1.x - point2.x;
 	float diff_y = point1.y - point2.y;
-	if( diff_x == 0 )
-		return vec3_angle;
-	float yaw = atan( diff_y / diff_x ) * ( 180 / M_PI );
-
-	// fix up yaw if needed
-	if( diff_x > 0 && diff_y > 0 )
-		yaw += 180.0;
-	else if( diff_x > 0 )
-		yaw += 180.0;
+	float yaw = atan2( diff_y, diff_x ) * ( 180 / M_PI );
     
 	return QAngle(0.0, yaw, 0.0);
 }
