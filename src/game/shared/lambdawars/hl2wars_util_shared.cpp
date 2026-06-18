@@ -142,11 +142,15 @@ void UTIL_ListPlayersForOwnerNumber( int ownernumber, CUtlVector< CHL2WarsPlayer
 //-----------------------------------------------------------------------------
 QAngle UTIL_CalculateDirection( const Vector &point1, const Vector &point2 )
 {
-	float diff_x = point1.x - point2.x;
-	float diff_y = point1.y - point2.y;
-	float yaw = atan2( diff_y, diff_x ) * ( 180 / M_PI );
+	const float diff_x = point2.x - point1.x;
+	const float diff_y = point2.y - point1.y;
+
+	if( diff_x == 0.0f && diff_y == 0.0f )
+		return vec3_angle;
+
+	const float yaw = RAD2DEG( atan2f( diff_y, diff_x ) );
     
-	return QAngle(0.0, yaw, 0.0);
+	return QAngle( 0.0f, yaw, 0.0f );
 }
 
 //-----------------------------------------------------------------------------
