@@ -155,6 +155,13 @@ void CWarsWeapon::GetShootOriginAndDirection( Vector &vShootOrigin, Vector &vSho
 		return;
 
 	vShootOrigin = pUnit->Weapon_ShootPosition();
+	// AI weapons should aim at the current target; direct control keeps eye aim.
+	if( pUnit->GetEnemy() && pUnit->GetCommander() == NULL )
+	{
+		vShootDirection = pUnit->GetShootEnemyDir(vShootOrigin, false);
+		return;
+	}
+
 	AngleVectors( QAngle(pUnit->m_fEyePitch, pUnit->m_fEyeYaw, 0.0), &vShootDirection );
 }
 
