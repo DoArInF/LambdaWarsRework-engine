@@ -398,7 +398,7 @@ bool CUnitBase::OnInternalDrawModel( ClientModelRenderInfo_t *pInfo )
 {
 	if( m_pTeamColorGlowEffect )
 	{
-		m_pTeamColorGlowEffect->SetColor( GetTeamColor( false ) );
+		m_pTeamColorGlowEffect->SetColor( GetRealTeamColor() );
 	}
 	return BaseClass::OnInternalDrawModel( pInfo );
 }
@@ -411,7 +411,7 @@ void CUnitBase::EnableTeamColorGlow( )
 	if( m_pTeamColorGlowEffect )
 		return;
 
-	m_pTeamColorGlowEffect = new CGlowObject( this, GetTeamColor(), 1.0, true );
+	m_pTeamColorGlowEffect = new CGlowObject( this, GetRealTeamColor(), 1.0, true );
 }
 
 //-----------------------------------------------------------------------------

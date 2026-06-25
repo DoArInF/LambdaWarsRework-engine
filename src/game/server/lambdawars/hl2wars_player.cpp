@@ -261,6 +261,32 @@ CBaseEntity *GetEntityFromMouseCommand( int idx )
 	return UTIL_EntityByIndex( idx );
 }
 
+static bool ReadMouseCommandData( CHL2WarsPlayer *pPlayer, const CCommand &args, MouseTraceData_t &mousedata, const char *pszCommand )
+{
+	if( args.ArgC() >= 11 )
+	{
+		mousedata.m_vStartPos = Vector( atof( args[1] ), atof( args[2] ), atof( args[3] ) );
+		mousedata.m_vEndPos = Vector( atof( args[4] ), atof( args[5] ), atof( args[6] ) );
+		mousedata.m_vWorldOnlyEndPos = Vector( atof( args[7] ), atof( args[8] ), atof( args[9] ) );
+
+		int idx = atol( args[10] );
+		mousedata.m_hEnt = GetEntityFromMouseCommand( idx );
+		return true;
+	}
+
+	if( args.ArgC() < 2 )
+	{
+		Warning( "%s: not enough arguments (only %d provided)\n", pszCommand, args.ArgC() );
+		return false;
+	}
+
+	mousedata = pPlayer->GetMouseData();
+
+	int idx = atol( args[1] );
+	mousedata.m_hEnt = GetEntityFromMouseCommand( idx );
+	return true;
+}
+
 //-----------------------------------------------------------------------------
 // Purpose:
 //-----------------------------------------------------------------------------
@@ -406,96 +432,54 @@ bool CHL2WarsPlayer::ClientCommand( const CCommand &args )
 	}
 	else if( !V_stricmp( args[0], "player_lmp" ) )
 	{
-		if( args.ArgC() < 2 )
-		{
-			Warning( "player_lmp: not enough arguments (only %d provided, while 2 needed)\n", args.ArgC() );
+		MouseTraceData_t mousedata;
+		if( !ReadMouseCommandData( this, args, mousedata, "player_lmp" ) )
 			return true;
-		}
-
-		MouseTraceData_t mousedata = GetMouseData();
-
-		int idx = atol(args[1]);
-		mousedata.m_hEnt = GetEntityFromMouseCommand( idx );
 
 		OnLeftMouseButtonPressedInternal( mousedata );
 		return true;
 	}
 	else if( !V_stricmp( args[0], "player_lmdp" ) )
 	{
-		if( args.ArgC() < 2 )
-		{
-			Warning( "player_lmdp: not enough arguments (only %d provided, while 2 needed)\n", args.ArgC() );
+		MouseTraceData_t mousedata;
+		if( !ReadMouseCommandData( this, args, mousedata, "player_lmdp" ) )
 			return true;
-		}
-
-		MouseTraceData_t mousedata = GetMouseData();
-
-		int idx = atol(args[1]);
-		mousedata.m_hEnt = GetEntityFromMouseCommand( idx );
 
 		OnLeftMouseButtonDoublePressedInternal( mousedata );
 		return true;
 	}
 	else if( !V_stricmp( args[0], "player_lmr" ) )
 	{
-		if( args.ArgC() < 2 )
-		{
-			Warning( "player_lmr: not enough arguments (only %d provided, while 2 needed)\n", args.ArgC() );
+		MouseTraceData_t mousedata;
+		if( !ReadMouseCommandData( this, args, mousedata, "player_lmr" ) )
 			return true;
-		}
-
-		MouseTraceData_t mousedata = GetMouseData();
-
-		int idx = atol(args[1]);
-		mousedata.m_hEnt = GetEntityFromMouseCommand( idx );
 
 		OnLeftMouseButtonReleasedInternal( mousedata );
 		return true;
 	}
 	else if( !V_stricmp( args[0], "player_rmp" ) )
 	{
-		if( args.ArgC() < 2 )
-		{
-			Warning( "player_rmp: not enough arguments (only %d provided, while 2 needed)\n", args.ArgC() );
+		MouseTraceData_t mousedata;
+		if( !ReadMouseCommandData( this, args, mousedata, "player_rmp" ) )
 			return true;
-		}
-
-		MouseTraceData_t mousedata = GetMouseData();
-
-		int idx = atol(args[1]);
-		mousedata.m_hEnt = GetEntityFromMouseCommand( idx );
 
 		OnRightMouseButtonPressedInternal( mousedata );
 		return true;
 	}
 	else if( !V_stricmp( args[0], "player_rmdp" ) )
 	{
-		if( args.ArgC() < 2 )
-		{
-			Warning( "player_rmdp: not enough arguments (only %d provided, while 2 needed)\n", args.ArgC() );
+		MouseTraceData_t mousedata;
+		if( !ReadMouseCommandData( this, args, mousedata, "player_rmdp" ) )
 			return true;
-		}
-
-		MouseTraceData_t mousedata = GetMouseData();
-
-		int idx = atol(args[1]);
-		mousedata.m_hEnt = GetEntityFromMouseCommand( idx );
 
 		OnRightMouseButtonDoublePressedInternal( mousedata );
 		return true;
 	}
 	else if( !V_stricmp( args[0], "player_rmr" ) )
 	{
-		if( args.ArgC() < 2 )
-		{
-			Warning( "player_rmr: not enough arguments (only %d provided, while 2 needed)\n", args.ArgC() );
+		MouseTraceData_t mousedata;
+		if( !ReadMouseCommandData( this, args, mousedata, "player_rmr" ) )
 			return true;
-		}
-
-		MouseTraceData_t mousedata = GetMouseData();
-
-		int idx = atol(args[1]);
-		mousedata.m_hEnt = GetEntityFromMouseCommand( idx );
 
 		OnRightMouseButtonReleasedInternal( mousedata );
 		return true;
